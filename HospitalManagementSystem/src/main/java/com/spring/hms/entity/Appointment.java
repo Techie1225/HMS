@@ -56,8 +56,19 @@ public class Appointment {
 
     @Column(name = "doctor_id")
     private Integer doctorId; 
+    
+    @Column(name = "customer_id")
+    private Integer customerId; 
 
-    public int getId() {
+    public Integer getCustomerId() {
+		return customerId;
+	}
+
+	public void setCustomerId(Integer customerId) {
+		this.customerId = customerId;
+	}
+
+	public int getId() {
 		return id;
 	}
 

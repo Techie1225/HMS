@@ -14,6 +14,8 @@ public interface AppointmentRepository extends JpaRepository<Appointment, Intege
 
 	List<Appointment> findByDoctorId(Integer doctordId);
 	
+	List<Appointment> findByCustomerId(Integer CustomerId);
+	
 	@Query(value = "SELECT * FROM app WHERE doctor_id = :doctorId AND appointment_date = :appointmentDate AND appointment_time = :appointmentTime", nativeQuery = true)
     List<Appointment> findByAppointment(Integer doctorId, String appointmentDate, String appointmentTime);
 	

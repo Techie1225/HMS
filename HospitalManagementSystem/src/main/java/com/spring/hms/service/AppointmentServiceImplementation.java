@@ -59,6 +59,10 @@ public class AppointmentServiceImplementation  {
 	public List<Appointment> findByDoctorId(int doctordId) {
 		return appointmentRepository.findByDoctorId(doctordId);
 	}
+	
+	public List<Appointment> findByCustomerId(int CustomerId) {
+		return appointmentRepository.findByCustomerId(CustomerId);
+	}
 
 	
 	public boolean isDoctorAvailable(Integer doctorId, String appointmentDate, String appointmentTime) {
